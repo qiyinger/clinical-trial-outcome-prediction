@@ -37,7 +37,7 @@ def text_2_lst_of_lst(text):
 
 def get_icdcode_lst():
 	input_file = 'data/raw_data.csv'
-	with open(input_file, 'r') as csvfile:
+	with open(input_file, 'r', encoding='utf-8') as csvfile:
 		rows = list(csv.reader(csvfile, delimiter = ','))[1:]
 	code_lst = []
 	for row in rows:
